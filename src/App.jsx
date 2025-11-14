@@ -1,4 +1,5 @@
 import Testing from "./comp/Testing"
+import UseRefEx from "./comp/UseRefEx"
 import NewComp from "./newComp"
 
 
@@ -12,6 +13,7 @@ function App() {
       
       <NewComp></NewComp>
       <Testing></Testing>
+      <UseRefEx></UseRefEx>
     </>
   )
 }
