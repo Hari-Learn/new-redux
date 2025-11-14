@@ -2,7 +2,7 @@ import Testing from "./comp/Testing"
 import ForwardRefEx from "./comp/UseRefEx"
 import UseRefEx from "./comp/UseRefEx"
 import NewComp from "./newComp"
-import {Route,Routes} from 'react-router-dom'
+import {Link, Route,Routes} from 'react-router-dom'
 import Home from "./pages/home"
 import About from "./pages/About"
 import Service from "./pages/Service"
@@ -14,6 +14,13 @@ function App() {
     <>
       
       <h1>React Router Sample</h1>
+      <div>
+        <nav>
+          <Link to='/'>Home</Link>
+          <Link to='/about'>{' '} About</Link>
+          <Link to='/service'>{' '} Service</Link>
+        </nav>
+      </div>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
