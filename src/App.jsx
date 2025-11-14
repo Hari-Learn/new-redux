@@ -5,6 +5,7 @@ import NewComp from "./newComp"
 import {Route,Routes} from 'react-router-dom'
 import Home from "./pages/home"
 import About from "./pages/About"
+import Service from "./pages/Service"
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/service' element={<Service/>}/>
 
 
       </Routes>
