@@ -1,18 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, forwardRef } from "react";
 
-function UseRefEx() {
-  const inputRef = useRef(null); // 1. Create a ref
+// Wrap the component with forwardRef
+const FancyInput = forwardRef((props, ref) => {
+  return <input ref={ref} {...props} />;
+});
+
+function ForwardRefEx() {
+  const inputRef = useRef(null);
 
   const handleFocus = () => {
-    inputRef.current.focus(); // 2. Access the input element
+    inputRef.current.focus();
   };
 
   return (
     <div>
-      <input ref={inputRef} type="text" placeholder="Type something..." />
-      <button onClick={handleFocus}>Focus the input</button>
+      <FancyInput ref={inputRef} placeholder="Type something fancy..." />
+      <button onClick={handleFocus}>Focus FancyInput</button>
     </div>
   );
 }
 
-export default UseRefEx;
+export default ForwardRefEx;
